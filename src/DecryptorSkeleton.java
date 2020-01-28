@@ -20,7 +20,7 @@ import java.util.HashMap;
  * language as opposed to C (The C solution for this is literally like 8x more complex).
  *
  * Place your @author tags here.
- * @author First Last : netid@iastate.edu
+ * @author Devin Milligan : milldev@iastate.edu
  * @author ...
  * @author ...
  * @author ...
@@ -34,7 +34,7 @@ public class DecryptorSkeleton {
         };
         
         convertBinaryArrayToDecimalArray(toDecrypt);
-        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
+        System.out.println("Decimal: " + Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
 
         shiftArrayValues(toDecrypt);
         System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 40 and the last is 55.
