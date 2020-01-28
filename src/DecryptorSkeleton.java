@@ -59,8 +59,13 @@ public class DecryptorSkeleton {
      */
     public static void convertBinaryArrayToDecimalArray(int[] toDecrypt) {
         // TODO
-    }
+        for (int i = 0; i< toDecrypt.length; i++) {
+            String binaryString= Integer.toString(toDecrypt[i]);
+            toDecrypt[i] =Integer.parseInt(binaryString,2);
+        }
 
+
+    }
 
     /**
      * STEP 2: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
