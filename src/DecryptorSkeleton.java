@@ -32,7 +32,7 @@ public class DecryptorSkeleton {
                 11010, 1001000, 110101, 1001100, 1111111, 11100, 10101, 10, 10000000,
                 1001100, 1101011, 1011101, 1, 1100, 1011101, 11010, 111, 111010
         };
-
+        
         convertBinaryArrayToDecimalArray(toDecrypt);
         System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
 
@@ -43,6 +43,7 @@ public class DecryptorSkeleton {
         System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 8 and the last is 11.
 
         System.out.println(A1Z26Cypher(toDecrypt));     // As a check, the first word in this String is "hope".
+        
     }
 
 
@@ -93,7 +94,11 @@ public class DecryptorSkeleton {
      * @param toDecrypt - The array to be decoded.
      */
     public static void divideArrayValues(int[] toDecrypt) {
-        // TODO
+        System.out.println();
+    	for (int i = 0; i < toDecrypt.length; i++) {
+        	toDecrypt[i] = toDecrypt[i] / 5;
+        	
+        }
     }
 
 
