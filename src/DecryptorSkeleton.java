@@ -23,7 +23,7 @@ import java.util.HashMap;
  * @author First Last : netid@iastate.edu
  * @author ...
  * @author ...
- * @author ...
+ * @authojr ...
  */
 public class DecryptorSkeleton {
     public static void main(String[] args) {
@@ -76,9 +76,21 @@ public class DecryptorSkeleton {
      *
      * @param toDecrypt - The array to be decoded.
      */
-    public static void shiftArrayValues(int[] toDecrypt) {
-        // TODO
-    }
+   public static void shiftArrayValues(int[] toDecrypt) {        // TODO
+        for (int i=0,i<toDecrypt.length,i++){
+            if(i%3==0)
+            toDecrypt[i]-=;
+        } else if(i%3==1){
+        toDecrypt[i]-=2;
+
+        } else{
+            toDecrypt[i]-=3;
+       }
+
+   }
+
+
+
 
 
     /**
@@ -140,7 +152,11 @@ public class DecryptorSkeleton {
 
         StringBuilder solution = new StringBuilder();
 
-        // TODO
+        for(int i = 0; i < 26; i++) {
+            solution.append(cypher.get(i));
+            System.out.println("Position " + i +  " :"  + cypher.get(i));
+        }
+
 
         solution.append('!');
         return solution.toString();
