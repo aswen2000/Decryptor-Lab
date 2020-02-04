@@ -25,6 +25,8 @@ import java.util.HashMap;
  * @author ...
  * @author ...
  */
+
+
 public class DecryptorSkeleton {
     public static void main(String[] args) {
         int[] toDecrypt = {
@@ -45,7 +47,6 @@ public class DecryptorSkeleton {
         System.out.println(A1Z26Cypher(toDecrypt));     // As a check, the first word in this String is "hope".
     }
 
-
     /**
      * STEP 1: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
      *         WHO COMPLETED THIS MAKE AND PUSH THE COMMIT TO GITHUB.
@@ -57,12 +58,14 @@ public class DecryptorSkeleton {
      *
      * @param toDecrypt - The array to be decoded.
      */
+
+
     public static void convertBinaryArrayToDecimalArray(int[] toDecrypt) {
         // TODO
     }
 
 
-    /**
+
      * STEP 2: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
      *         WHO COMPLETED THIS MAKE AND PUSH THE COMMIT TO GITHUB.
      *
@@ -75,9 +78,12 @@ public class DecryptorSkeleton {
      *       it's easier to read and expectation is about seven lines of code.
      *
      * @param toDecrypt - The array to be decoded.
-     */
+
+
     public static void shiftArrayValues(int[] toDecrypt) {
-        // TODO
+        for (int i = 0; toDecryt; i++) {
+
+        }
     }
 
 
@@ -91,13 +97,14 @@ public class DecryptorSkeleton {
      * HINT: This can be done in two lines of code.
      *
      * @param toDecrypt - The array to be decoded.
-     */
+    */
+
     public static void divideArrayValues(int[] toDecrypt) {
         // TODO
-    }
 
 
-    /**
+
+
      * STEP 4: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
      *         WHO COMPLETED THIS MAKE AND PUSH THE COMMIT TO GITHUB.
      *
@@ -107,7 +114,9 @@ public class DecryptorSkeleton {
      * HINT: This can be done in two additional lines of code.
      *
      * @param toDecrypt - The array to be decoded.
-     */
+
+
+
     public static String A1Z26Cypher(int[] toDecrypt) {
         HashMap<Integer, Character> cypher = new HashMap<>();
         cypher.put(0, ' ');
@@ -124,6 +133,7 @@ public class DecryptorSkeleton {
         cypher.put(11, 'k');
         cypher.put(12, 'l');
         cypher.put(13, 'm');
+        cypher.put(13, 'm');
         cypher.put(14, 'n');
         cypher.put(15, 'o');
         cypher.put(16, 'p');
@@ -137,10 +147,14 @@ public class DecryptorSkeleton {
         cypher.put(24, 'x');
         cypher.put(25, 'y');
         cypher.put(26, 'z');
-
         StringBuilder solution = new StringBuilder();
 
-        // TODO
+
+        for(int i = 0; i < 26; i++) {
+            solution.append(cypher.get(i));
+        }
+
+
 
         solution.append('!');
         return solution.toString();
