@@ -20,10 +20,10 @@ import java.util.HashMap;
  * language as opposed to C (The C solution for this is literally like 8x more complex).
  *
  * Place your @author tags here.
- * @author First Last : netid@iastate.edu
+ * @author Devin Milligan : milldev@iastate.edu
  * @author ...
  * @author ...
- * @author ...
+ * @authojr ...
  */
 
 
@@ -34,9 +34,9 @@ public class DecryptorSkeleton {
                 11010, 1001000, 110101, 1001100, 1111111, 11100, 10101, 10, 10000000,
                 1001100, 1101011, 1011101, 1, 1100, 1011101, 11010, 111, 111010
         };
-
+        
         convertBinaryArrayToDecimalArray(toDecrypt);
-        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
+        System.out.println("Decimal: " + Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
 
         shiftArrayValues(toDecrypt);
         System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 40 and the last is 55.
@@ -45,6 +45,7 @@ public class DecryptorSkeleton {
         System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 8 and the last is 11.
 
         System.out.println(A1Z26Cypher(toDecrypt));     // As a check, the first word in this String is "hope".
+        
     }
 
     /**
@@ -62,8 +63,13 @@ public class DecryptorSkeleton {
 
     public static void convertBinaryArrayToDecimalArray(int[] toDecrypt) {
         // TODO
-    }
+        for (int i = 0; i< toDecrypt.length; i++) {
+            String binaryString= Integer.toString(toDecrypt[i]);
+            toDecrypt[i] =Integer.parseInt(binaryString,2);
+        }
 
+
+    }
 
 
      * STEP 2: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
@@ -79,12 +85,23 @@ public class DecryptorSkeleton {
      *
      * @param toDecrypt - The array to be decoded.
 
+     */
+   public static void shiftArrayValues(int[] toDecrypt) {        // TODO
+        for (int i=0,i<toDecrypt.length,i++){
+            if(i%3==0)
+            toDecrypt[i]-=;
+        } else if(i%3==1){
+        toDecrypt[i]-=2;
 
-    public static void shiftArrayValues(int[] toDecrypt) {
-        for (int i = 0; toDecryt; i++) {
+        } else{
+            toDecrypt[i]-=3;
+       }
 
-        }
-    }
+   }
+
+
+
+
 
 
     /**
@@ -100,7 +117,12 @@ public class DecryptorSkeleton {
     */
 
     public static void divideArrayValues(int[] toDecrypt) {
-        // TODO
+        System.out.println();
+    	for (int i = 0; i < toDecrypt.length; i++) {
+        	toDecrypt[i] = toDecrypt[i] / 5;
+        	
+        }
+    }
 
 
 
@@ -149,9 +171,9 @@ public class DecryptorSkeleton {
         cypher.put(26, 'z');
         StringBuilder solution = new StringBuilder();
 
-
         for(int i = 0; i < 26; i++) {
             solution.append(cypher.get(i));
+            System.out.println("Position " + i +  " :"  + cypher.get(i));
         }
 
 
